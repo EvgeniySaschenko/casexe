@@ -1,0 +1,20 @@
+.sidebar
+	min-width: 200px
+	flex-basis: 200px
+	&_left
+		.sidebar
+			&__item
+				&_1
+					margin-bottom: 110px
+
+		
+@media #{$phone}
+	.sidebar
+		&_left
+			display: flex
+			align-items: center
+			flex-direction: column
+			flex-basis: auto
+			.sidebar
+				&__item
+					margin-bottom: 20px

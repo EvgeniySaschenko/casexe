@@ -1,0 +1,28 @@
+mixin b-footer()
+	+b.FOOTER.footer
+		.container
+			+e.row
+				+e.col_1
+					+b.copyright
+						+e.text © 2012–2013 ЗАО «Компания»
+						+e.A.link_mail(href="mailto:info@name.ru") info@name.ru
+
+				+e.col_2
+					+b.UL.menu_footer
+						+e.LI.item
+							+e.A.link(href="#") Главная
+						+e.LI.item
+							+e.A.link(href="#") Каталог
+						+e.LI.item
+							+e.A.link(href="#") Доставка и оплата
+						+e.LI.item
+							+e.A.link(href="#") Прайс-лист
+						+e.LI.item
+							+e.A.link(href="#") Контакты
+
+				+e.col_3
+					+b.logo_dev
+						+e.IMG.img(src="img/logo_dev.png")
+						+e.text
+							+e.A.link(href="#") Разработка сайта — <br>
+							SPAN компания «Пиксель Плюс»

@@ -1,0 +1,38 @@
+.slider
+	position: relative
+	height: 400px
+	.container
+		height: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__item
+		display: flex
+		justify-content: center
+		align-items: center
+		overflow: hidden
+		width: 100%
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: #fff
+		z-index: 0
+		opacity: 0
+		transition-duration: .5s
+		&.active
+			z-index: 2
+			opacity: 1
+			transition-duration: 2s
+	&__btn
+		display: inline-block
+		font-size: 30px
+		position: relative
+		z-index: 1002
+		opacity: .5
+		color: #ffffff
+		background: #000000
+		padding: 5px
+		margin: 10px
+		cursor: pointer

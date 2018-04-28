@@ -1,0 +1,126 @@
+extends ../layout/root
+block title 
+	title Doc title
+block meta_k 
+	meta(name="keywords" content="meta_k .........text")
+block meta_d 
+	meta(name="description" content="meta_d ......text")
+
+block main
+		+b.content
+			.container
+				// menu_path-back
+				+e.row_1
+					+b.menu_path-back
+						+e.item 
+							+e.A.link(href="") Главная
+						+e.item 
+							+e.A.link(href="#") Каталог
+						+e.item 
+							+e.A.link(href="#") Бытовая техника
+
+				+e.row_2
+					// sidebar
+					+b.ASIDE.sidebar_left.leftblock 
+						+e.item_1
+							+b.MENU.menu_sidebar-left
+								+e.btn_catalog Каталог товаров
+								+e.item
+									+e.title Автомобили
+									+e.UL.list
+										+e.LI.item 
+											+e.A.link(href="#") Lorem 1
+									+e.A.title(href="#").active Бытовая техника
+									+e.UL.list
+										+e.LI.item.active 
+											+e.A.link(href="#") Микроволновки
+										+e.LI.item 
+											+e.A.link(href="#") Холодильники
+										+e.LI.item 
+											+e.A.link(href="#") Посудомоечные машины
+										+e.LI.item 
+											+e.A.link(href="#") Чайники
+									+e.title Мобильная техника
+									+e.UL.list
+										+e.LI.item 
+											+e.A.link(href="#") Lorem 1
+									+e.title Компьютеры
+									+e.UL.list
+										+e.LI.item 
+											+e.A.link(href="#") Lorem 1
+									+e.title Одежда
+									+e.UL.list
+										+e.LI.item 
+											+e.A.link(href="#") Lorem 1
+									+e.title Недвижимость
+									+e.UL.list
+										+e.LI.item 
+											+e.A.link(href="#") Lorem 1
+
+						+e.item_2
+							+b.A.btn_price-list(href="#")
+								+e.I.icon.fas.fa-file-excel
+								+e.SPAN.text Прайс-лист
+
+
+					// Main
+					+b.MAIN.main.centerblock
+						// list production
+						+b.list-product
+							+e.item
+								+e.SPAN.box-img
+									+e.IMG.img(src="http://placekitten.com/290/350")
+								+e.P.text Самый клевый чайник, который надо купить!
+								+e.box-buy
+									+e.SPAN.price 1900
+										+e.SPAN.currency р.
+									+e.I.btn.fas.fa-cart-plus
+
+							+e.item
+								+e.SPAN.box-img
+									+e.IMG.img(src="http://placekitten.com/400/350")
+								+e.P.text Самый клевый чайник, который надо купить!
+								+e.box-buy
+									+e.SPAN.price 1900
+										+e.SPAN.currency р.
+									+e.I.btn.fas.fa-cart-plus
+
+							+e.item
+								+e.SPAN.box-img
+									+e.IMG.img(src="http://placekitten.com/400/400")
+								+e.P.text Самый клевый чайник, который надо купить!
+								+e.box-buy
+									+e.SPAN.price 1900
+										+e.SPAN.currency р.
+									+e.I.btn.fas.fa-cart-plus
+
+							+e.item
+								+e.SPAN.box-img
+									+e.IMG.img(src="http://placekitten.com/50/50")
+								+e.P.text Самый клевый чайник, который надо купить!
+								+e.box-buy
+									+e.SPAN.price 1900
+										+e.SPAN.currency р.
+									+e.I.btn.fas.fa-cart-plus
+
+							+e.item
+								+e.SPAN.box-img
+									+e.IMG.img(src="http://placekitten.com/200/200")
+								+e.P.text Самый клевый чайник, который надо купить!
+								+e.box-buy
+									+e.SPAN.price 1900
+										+e.SPAN.currency р.
+									+e.I.btn.fas.fa-cart-plus
+								
+						+b.pagination
+							+e.A.link(href="#") 1
+							+e.A.link(href="#") 2
+							+e.A.link.active(href="#") 3
+							+e.A.link(href="#") 4
+							+e.A.link(href="#") 5
+							+e.A.link(href="#") 6
+							+e.A.link(href="#") 7
+
+						+b.text-box_about
+							+e.P.text Компания «Пиксель Плюс» существует более 6 лет, за это время мы принимали участие в разработке более чем 700 сайтов, поэтому можем уверенно называть себя профессионалами. На данный момент наш коллектив состоит из более чем 30 сотрудников работающих в двух офисах в Москве и Зеленограде.характерные для этого жанра мотивы: неразделённой любви, ухода молодости, угасания души. 
+							+e.P.text Одним из основных направлений работ нашей компании является поисковое продвижение сайтов, на данной момент мы работаем с более чем 150 постоянными клиентами по более чем 11 000 поисковым запросам. При этом в работе основной акцент мы делаем на качестве работ, а так же применяем собственные уникальные разработки в области SEO продвижения. На данный момент отдел SEO состоит из 9 человек под руководством ведущего специалиста, преимущественно работающих в нашем московском офисе.

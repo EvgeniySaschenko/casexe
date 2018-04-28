@@ -1,0 +1,18 @@
+.footer
+	margin-top: 200px
+	background-color: $color-4
+	padding: 50px 0
+	&__row
+		width: 100%
+		display: flex
+		justify-content: space-between
+
+@media #{$phone}
+	.footer
+		&__row
+			flex-direction: column
+		&__col
+			display: flex
+			justify-content: center
+			width: 100%
+			margin-bottom: 20px

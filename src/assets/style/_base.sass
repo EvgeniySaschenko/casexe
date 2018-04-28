@@ -1,0 +1,90 @@
+/* PT Sans cyrillic */
+@font-face
+	font-family: 'PT Sans'
+	font-style: normal
+	font-weight: 400
+	src: local('PT Sans'), local('PTSans-Regular'), url(https://fonts.gstatic.com/s/ptsans/v9/jizaRExUiTo99u79D0aExdGM.woff2) format('woff2')
+	unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+	font-display: swap
+
+/* PT Sans latin */
+@font-face
+	font-family: 'PT Sans'
+	font-style: normal
+	font-weight: 400
+	src: local('PT Sans'), local('PTSans-Regular'), url(https://fonts.gstatic.com/s/ptsans/v9/jizaRExUiTo99u79D0KExQ.woff2) format('woff2')
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+	font-display: swap
+
+/* cyrillic PT Sans Italic */
+@font-face
+	font-family: 'PT Sans Italic'
+	font-style: italic
+	font-weight: 400
+	src: local('PT Sans Italic'), local('PTSans-Italic'), url(https://fonts.gstatic.com/s/ptsans/v9/jizYRExUiTo99u79D0e0w8mIEDQ.woff2) format('woff2')
+	unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+	font-display: swap
+
+@font-face
+	font-family: 'PT Sans Bold'
+	font-style: normal
+	font-weight: 700
+	src: local('PT Sans Bold'), local('PTSans-Bold'), url(https://fonts.gstatic.com/s/ptsans/v9/jizfRExUiTo99u79B_mh0O6tLQ.woff2) format('woff2')
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+	font-display: swap
+
+/* PT Sans Bold cyrillic */
+@font-face
+	font-family: 'PT Sans Bold'
+	font-style: normal
+	font-weight: 700
+	src: local('PT Sans Bold'), local('PTSans-Bold'), url(https://fonts.gstatic.com/s/ptsans/v9/jizfRExUiTo99u79B_mh0OqtLQ0Z.woff2) format('woff2')
+	unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+	font-display: swap
+
+/* Open Sans Ligth */
+@font-face
+	font-family: 'Open Sans Condensed Light'
+	font-style: normal
+	font-weight: 300
+	src: local('Open Sans Condensed Light'), local('OpenSansCondensed-Light'), url(https://fonts.gstatic.com/s/opensanscondensed/v12/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMRw.woff2) format('woff2')
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+	font-display: swap
+
+body
+	font-family: 'PT Sans', sans-serif
+	font-size: 14px
+	font-weight: 400
+	line-height: 22px
+	color: $color-1
+
+a
+	color: $color-1
+	text-decoration: none
+	&:hover
+		transition-duration: .3s
+
+button,
+input[type="checkbox"]
+	border: none
+	outline: none
+
+button,
+input[type="submit"]
+	cursor: pointer
+
+.wrapper
+	margin: 0 auto
+	background-color: auto
+	background-position: 50% 0
+	position: relative
+
+.content
+	min-height: 100vh
+
+.container
+	box-sizing: border-box
+	max-width: 1000px
+	width: 100%
+	margin: 0 auto
+	padding: 0 10px

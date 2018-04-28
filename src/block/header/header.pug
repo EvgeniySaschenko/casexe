@@ -1,0 +1,66 @@
+mixin b-header()
+	+b.feedback
+		+e.FORM.form
+			+e.SPAN.close X
+			+e.title Обратная связь
+			+e.LABEL.label(for="feedback__name") Ваше имя*
+			+e.INPUT.field_name(name="name" required="required" id="feedback__name")
+
+			+e.LABEL.label(for="feedback__phone") Телефон*
+			+e.INPUT.field_phone(name="phone" required="required" id="feedback__phone")
+
+			+e.LABEL.label(for="feedback__mail") Email*
+			+e.INPUT.field_mail(name="mail" type="email" required="required" id="feedback__mail")
+
+			+e.LABEL.label(for="feedback__message") Сообщение
+			+e.TEXTAREA.textarea_comment(name="message" id="feedback__message")
+
+			+e.BUTTON.btn Отправить
+
+	+b.HEADER.header
+			+e.row_1
+				.container
+					+e.col_1
+						// Logo
+						+b.A.logo_header(href="#")
+							+e.IMG.img(src="img/logo.png" alt="logo")
+					+e.col_2
+						// Contacts
+						+b.contacts
+							+e.item
+								+e.A.link_phone(href="tel:74997777777") +7(499) 777-77-77
+							+e.item
+								+e.A.link_phone(href="tel:74997777777") +7(499) 777-77-77
+						// Btn
+						+b.BUTTON.btn_feedback Обратная связь
+			+e.row_2
+					// Nav
+					+b.MENU.menu(class="_header")
+						.container
+							+e.btn-burger(id="menu__btn-burger_header")
+								+e.btn-burger-item
+								+e.btn-burger-item
+								+e.btn-burger-item
+							+e.UL.list#menu-list_header
+								+e.LI.item
+									+e.A.link(href="#") Главная
+								+e.LI.item
+									+e.A.link(href="#") Каталог
+								+e.LI.item
+									+e.A.link(href="#") Доставка и оплата
+								+e.LI.item
+									+e.A.link(href="#") Прайс-лист
+								+e.LI.item
+									+e.A.link(href="#") Контакты
+			+e.row_3
+				//Slider
+				+b.slider
+					.container
+						+e.I.btn_prev.fas.fa-angle-left
+						+e.I.btn_next.fas.fa-angle-right
+						+e.item
+							+e.IMG.img(src="http://placekitten.com/1400/400")
+						+e.item
+							+e.IMG.img(src="http://placekitten.com/1000/200")
+						+e.item
+							+e.IMG.img(src="http://placekitten.com/1920/1080")

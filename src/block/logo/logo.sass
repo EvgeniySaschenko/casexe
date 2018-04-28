@@ -1,0 +1,33 @@
+.logo
+	&_header
+		display: inline-block
+		.logo__img
+			height: 100px
+			width: 273px
+
+
+@media #{$phone}
+	.logo
+		&_header
+			.logo__img
+				height: 80px
+				width: 218px
+
+				
+.logo
+	&_dev
+		display: flex
+		color: #fff
+		.logo
+			&__img
+				height: 38px
+				width: 36px
+				margin-right: 10px
+			&__link
+				color: #fff
+
+
+@media #{$phone}
+	.logo
+		&_dev
+			text-align: center

@@ -1,0 +1,67 @@
+.list-product
+	display: flex
+	flex-wrap: wrap
+	margin-right: -15px
+	&__item
+		display: flex
+		flex-direction: column
+		width: 250px
+		height: 380px
+		box-sizing: border-box
+		padding: 20px
+		background-color: $color-3
+		margin-bottom: 20px
+		margin-right: 15px
+	&__box-img
+		flex-shrink: 0
+		height: 210px
+		width: 210px
+		overflow: hidden
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: #fff
+	&__img
+		height: 100%
+	&__text
+		height: 100%
+		margin: 24px 0
+		font-size: 18px
+		line-height: 18px
+		flex-grow: 1
+		overflow: hidden
+		text-overflow: ellipsis
+		position: relative
+		&::after
+			content: ""
+			display: inline-block
+			width: 100%
+			height: 6px
+			background-color: $color-3
+			position: absolute
+			bottom: 0
+			left: 0
+	&__box-buy
+		display: flex
+		justify-content: space-between
+		flex-shrink: 0
+	&__price
+		font-size: 28px
+		line-height: 18px
+		font-family: 'PT Sans Bold'
+		color: $color-2
+	&__currency
+		margin-left: 10px
+	&__btn
+		color: #ffffff
+		font-size: 20px
+		margin-right: 10px
+
+@media #{$pc}
+	.list-product
+		margin-right: 0
+		display: flex
+		justify-content: center
+		&__item
+			margin-right: 8px
+			margin-left: 8px

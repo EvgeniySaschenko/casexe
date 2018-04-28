@@ -1,0 +1,85 @@
+include ../../node_modules/bemto.pug/bemto.pug
+include ../block/index
+
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="shortcut icon" href="imag/favicon.ico" type="image/x-icon")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		block meta_k
+		block meta_d
+		block title
+	body
+		style.
+			.preloader{
+				height: 100vh;
+				width: 100%;
+				background-color: rgb(255,255,255);
+				color: rgb(36,111,176);
+				font-size: 45px;
+				font-family:  Arial, sans-serif;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				position: fixed;
+				top: 0;
+				left: 0;
+				display: flex;
+				z-index: -10000;
+				opacity: 0;
+				transition-duration: 1s;
+			}
+			.preloader.noload{
+				z-index: 10000;
+				opacity: 1;
+				transition-duration: 1s;
+			}
+			.wrapper.noload{
+				display: none;
+			}
+
+		.preloader
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="lds-balls" width="80px" height="80px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><circle cx="64.6661" cy="64.2234" r="6" fill="#51CACC">
+				<animate attributeName="cx" values="75;57.72542485937369" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+				<animate attributeName="cy" values="50;73.77641290737884" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+				<animate attributeName="fill" values="#51CACC;#9DF871" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+			</circle><circle cx="41.0048" cy="68.3436" r="6" fill="#9DF871">
+				<animate attributeName="cx" values="57.72542485937369;29.774575140626318" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+				<animate attributeName="cy" values="73.77641290737884;64.69463130731182" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+				<animate attributeName="fill" values="#9DF871;#E0FF77" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+			</circle><circle cx="29.7746" cy="47.1136" r="6" fill="#E0FF77">
+				<animate attributeName="cx" values="29.774575140626318;29.774575140626315" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+				<animate attributeName="cy" values="64.69463130731182;35.30536869268818" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+				<animate attributeName="fill" values="#E0FF77;#DE9DD6" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+			</circle><circle cx="46.4952" cy="29.8725" r="6" fill="#DE9DD6">
+				<animate attributeName="cx" values="29.774575140626315;57.72542485937368" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+				<animate attributeName="cy" values="35.30536869268818;26.22358709262116" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+				<animate attributeName="fill" values="#DE9DD6;#FF708E" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+			</circle><circle cx="68.0593" cy="40.447" r="6" fill="#FF708E">
+				<animate attributeName="cx" values="57.72542485937368;75" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+				<animate attributeName="cy" values="26.22358709262116;49.99999999999999" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+				<animate attributeName="fill" values="#FF708E;#51CACC" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+			</circle></svg>
+
+		.wrapper
+			script.
+				document.querySelector('.wrapper').classList.add('noload');
+				document.querySelector('.preloader').classList.add('noload');
+
+				setTimeout( ()=>{
+					document.querySelector('.wrapper').classList.remove('noload');
+					document.querySelector('.preloader').classList.remove('noload');
+				}, 2000 );
+
+			+b-header()
+
+			block main	
+				+b.MAIN.main
+				
+			+b-footer()
+
+			link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous")
+			link(rel="stylesheet", href="css/style.css")
+			script(src="js/app.js")

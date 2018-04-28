@@ -1,0 +1,182 @@
+.menu
+	&_header
+		padding: 25px 0
+		background-color: $color-4
+		.menu
+			&__list
+				display: flex
+				justify-content: space-between
+			&__item
+				font-size: 30px
+				border-right: 1px solid #fff
+				flex-grow: 1
+				text-align: center
+				&.active .menu__link
+					position: relative
+					&::after
+						content: ""
+						display: inline-block
+						position: absolute
+						left: 0
+						bottom: -4px
+						width: 100%
+						border-bottom: 1px solid #fff
+				&:last-child
+					border-right: 0
+			&__link
+				text-align: center
+				color: #fff
+				display: inline-block
+
+@media #{$pc}
+	.menu
+		&_header
+			padding: 10px 0
+			position: relative
+			.container
+				display: flex
+				justify-content: flex-end
+				padding: 0
+			.menu
+				&__list
+					width: 100%
+					display: none
+					&.active
+						display: flex
+						flex-direction: column
+						position: absolute
+						top: 0
+						left: 0
+						z-index: 1000
+						.menu
+							&__item
+								background-color: $color-1
+								&:first-child,
+								&:last-child
+									text-align: center
+								&::before
+									display: none
+				&__item
+					padding: 10px 
+				&__btn-burger
+					position: relative
+					right: 10px
+					z-index: 1001
+					width: 45px
+					height: 45px
+					display: flex
+					flex-direction: column
+					justify-content: space-between
+					cursor: pointer
+				&__btn-burger-item
+					width: 100%
+					border-bottom: 6px solid $color-3
+					border-radius: 3px
+
+
+@media #{$phone}
+	.menu
+		&_header
+			padding: 0
+			.menu
+				&__list
+					&.active
+						position: fixed
+						top: 0
+						left: 0
+				&__item
+					padding: 15px 0
+				&__btn-burger
+					position: fixed
+					top: 40px
+					right: 10px
+				&__btn-burger-item
+					border-bottom: 6px solid $color-2
+
+
+.menu
+	&_path-back
+		display: flex
+		flex-wrap: wrap
+		margin: 10px 0
+		.menu
+			&__item
+				line-height: 18px
+				&:last-child .menu__link
+					text-decoration: none
+				&:last-child::after
+					display: none	
+				&::after
+					content: "/"
+					display: inline-block
+					padding: 0 10px 0 5px
+			&__link
+				text-decoration: underline
+				display: inline-block
+
+
+.menu
+	&_sidebar-left
+		.menu
+			&__btn
+				&_catalog
+					display: none
+			&__list
+				display: none
+				.menu__item
+					margin-left: 20px
+					list-style-type: disc
+			&__title
+				font-size: 18px
+				line-height: 30px
+				cursor: pointer
+				&.active
+					text-decoration: underline
+			&__item.active > .menu__link
+				text-decoration: underline
+				color: #000
+			&__title.active + .menu__list
+				display: block
+			&__link
+				&:hover
+					text-decoration: underline
+					color: #000
+
+
+
+@media #{$phone}
+	.menu
+		&_sidebar-left
+			.menu
+				&__box
+					display: none
+				&__btn
+					&_catalog
+						font-size: 25px
+						display: inline-block
+						background-color: $color-2
+						padding: 10px
+						color: #fff
+						cursor: pointer
+						margin: 20px 0
+				&__title
+					font-size: 22px
+				&__link
+					font-size: 18px
+
+
+
+.menu
+	&_footer
+		.menu
+			&__link
+				display: inline-block
+				color: #fff
+				text-decoration: underline
+				margin-bottom: 5px
+				line-height: 26px
+
+@media #{$phone}
+	.menu
+		&_footer
+			text-align: center

@@ -1,0 +1,30 @@
+.header
+	&__row
+		&_1
+			background-color: $color-3
+			.container
+				display: flex
+				justify-content: space-between
+				align-items: stretch
+				padding: 40px 10px
+				box-sizing: border-box
+				min-height: 230px
+			.header
+				&__col
+					display: flex
+					&_1
+						align-items: center
+					&_2
+						flex-direction: column
+						align-items: flex-end
+
+@media #{$phone}
+	.header
+		&__row
+			&_1
+				.container
+					flex-direction: column
+				.header
+					&__col
+						&_2
+							align-items: center

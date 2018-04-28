@@ -1,0 +1,31 @@
+.btn
+	display: inline-block
+	color: $color-1
+	&_feedback
+		font-size: 24px
+		font-family: 'PT Sans Bold'
+
+.btn
+	&_price-list
+		display: inline-block
+		text-align: center
+		color: #000
+		.btn
+			&__icon
+				font-size: 100px
+				padding-bottom: 20px
+			&__text
+				display: inline-block
+				width: 100%
+				font-weight: bold
+				font-size: 30px
+				color: $color-2
+
+@media #{$phone}
+	.btn
+		&_price-list
+			.btn
+				&__icon
+					font-size: 50px
+				&__text
+					font-size: 20px
