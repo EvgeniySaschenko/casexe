@@ -42,7 +42,7 @@ gulp.task('pug', () => {
 		.pipe(data( ()=> {
 			return JSON.parse(fs.readFileSync('./src/data/data.json'));
 		}))
-		.pipe( pug( { pretty: isProduction ? false : true } ) )
+		.pipe( pug( { pretty: true } ) )
 		.pipe(gulp.dest('build'));
 
 });
@@ -55,7 +55,7 @@ gulp.task('sass', () => {
 			.pipe(sass())
 			.pipe(gulpIf( !isProduction, sourcemaps.init() ))
 			.pipe(autoprefixer())
-			.pipe(gulpIf( isProduction, csso() ))
+		//	.pipe(gulpIf( isProduction, csso() ))
 			.pipe(gulpIf( !isProduction, sourcemaps.write() ))
 		.pipe(gulp.dest('build/css/'));
 	},500 );
@@ -67,12 +67,12 @@ gulp.task('js', () => {
 		.pipe(babel({presets: ['es2015']}))
 		.pipe(gulpIf( !isProduction, sourcemaps.init() ))
 		.pipe(concat('app.js'))
-		.pipe(gulpIf( isProduction, minify({ext : {
-					src : '-debug.js',
-					min : '.js'
-				}
-			})
-		))
+		// .pipe(gulpIf( isProduction, minify({ext : {
+		// 			src : '-debug.js',
+		// 			min : '.js'
+		// 		}
+		// 	})
+		// ))
 		.pipe(gulpIf( !isProduction, sourcemaps.write() ))
 	.pipe(gulp.dest('build/js/'));
 });
